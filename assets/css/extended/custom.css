@@ -140,14 +140,14 @@
 
 /* Vibrant gradient backgrounds */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
     min-height: 100vh;
     transition: background 0.3s ease;
 }
 
 /* Dark mode - deeper, more dramatic gradient */
 body.dark {
-    background: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 25%, #11998e 50%, #38ef7d 75%, #0575e6 100%);
+    background: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 25%, #11998e 50%, #38ef7d 75%, #0575e6 100%) !important;
 }
 
 /* Alternative vibrant gradients - uncomment to try */
@@ -271,34 +271,42 @@ body.dark {
 }
 
 /* Enhance profile content readability without dark box */
-/* Only add text shadow in dark mode for better contrast */
-.dark .profile .profile_inner h1,
-.dark .profile .profile_inner h2,
-.dark .profile .profile_inner p {
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
-}
+/* Removed text shadow for clean appearance */
 
 /* Improve button visibility on gradients */
 .profile-button {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    background: transparent !important;
+    background-color: transparent !important;
+    backdrop-filter: none;
+    border: 2px solid var(--primary);
     color: var(--primary);
     transition: all 0.3s ease;
 }
 
-.dark .profile-button {
-    background: rgba(0, 0, 0, 0.2);
-    border: 2px solid rgba(255, 255, 255, 0.3);
-}
-
 .profile-button:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--primary) !important;
+    background-color: var(--primary) !important;
+    color: var(--theme);
     transform: translateY(-2px);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .dark .profile-button:hover {
-    background: rgba(0, 0, 0, 0.3);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Also target Hugo's default button classes in profile area */
+.profile .button,
+.profile .buttons .button {
+    background: transparent !important;
+    background-color: transparent !important;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.profile .button:hover,
+.profile .buttons .button:hover {
+    background: var(--primary) !important;
+    background-color: var(--primary) !important;
+    color: var(--theme);
 } 
