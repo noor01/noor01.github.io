@@ -138,44 +138,48 @@
     transform: scale(1.1);
 }
 
-/* Beautiful gradient backgrounds */
+/* Vibrant gradient backgrounds */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
     min-height: 100vh;
     transition: background 0.3s ease;
 }
 
-/* Dark mode gradient */
+/* Dark mode - deeper, more dramatic gradient */
 body.dark {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 25%, #2c3e50 50%, #34495e 75%, #2c3e50 100%);
+    background: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 25%, #11998e 50%, #38ef7d 75%, #0575e6 100%);
 }
 
-/* Alternative gradients - feel free to uncomment and try these */
+/* Alternative vibrant gradients - uncomment to try */
 /*
 Light mode alternatives:
 body {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
 }
 
 body {
-    background: linear-gradient(135deg, #e3ffe7 0%, #d9e7ff 100%);
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
 }
 
 body {
-    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 50%, #ff9a9e 100%);
+}
+
+body {
+    background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
 }
 
 Dark mode alternatives:
 body.dark {
-    background: linear-gradient(135deg, #232526 0%, #414345 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
 
 body.dark {
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    background: linear-gradient(135deg, #000000 0%, #434343 50%, #000000 100%);
 }
 
 body.dark {
-    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    background: linear-gradient(135deg, #2c3e50 0%, #3498db 50%, #2c3e50 100%);
 }
 */
 
@@ -201,9 +205,9 @@ body.dark {
 
 /* Ensure good contrast for readability */
 .post-entry {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -211,58 +215,90 @@ body.dark {
 }
 
 .dark .post-entry {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .post-entry:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
 .dark .post-entry:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Ensure theme toggle button is visible */
+/* Fix theme toggle button to be circular */
 #theme-toggle {
     position: relative;
     z-index: 10;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 50%;
-    padding: 8px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: all 0.3s ease;
 }
 
 .dark #theme-toggle {
-    background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #theme-toggle:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.3);
     transform: scale(1.1);
 }
 
 .dark #theme-toggle:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
 }
 
-/* Profile mode styling improvements */
+/* Remove dark box around profile area */
 .profile .profile_inner {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-    padding: 2rem;
-    margin: 1rem;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    margin: 0;
 }
 
-.dark .profile .profile_inner {
+/* Enhance profile content readability without dark box */
+/* Only add text shadow in dark mode for better contrast */
+.dark .profile .profile_inner h1,
+.dark .profile .profile_inner h2,
+.dark .profile .profile_inner p {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Improve button visibility on gradients */
+.profile-button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.dark .profile-button {
     background: rgba(0, 0, 0, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.profile-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.dark .profile-button:hover {
+    background: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
 } 
