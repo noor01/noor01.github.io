@@ -1,0 +1,160 @@
+baseURL: "https://noor01.github.io"
+title: "Noorsher Ahmed, PhD"
+theme: "PaperMod"
+
+# Updated pagination config
+pagination:
+  pagerSize: 10
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+
+languages:
+  en:
+    languageName: "English"
+    languageAltTitle: "English"
+    weight: 1
+    title: "Noorsher Ahmed, PhD"
+
+    menu:
+      main:
+        - name: Papers
+          url: papers/
+          weight: 1
+        - name: Tools
+          url: tools/
+          weight: 2
+        - name: Teaching
+          url: teaching/
+          weight: 3
+        - name: Tags
+          url: tags/
+          weight: 4
+        - name: Archive
+          url: archive/
+          weight: 5
+        - name: Search
+          url: search/
+          weight: 6
+
+params:
+  env: production
+  author: "Noorsher Ahmed"
+  defaultTheme: auto
+  disableThemeToggle: false
+  DateFormat: "January 2006"
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: false
+  ShowToc: false
+  disableSpecial1stPost: true
+  disableScrollToTop: false
+  comments: false
+  hidemeta: false
+  hideSummary: true
+  showtoc: false
+  tocopen: false
+
+  # Profile mode configuration
+  profileMode:
+    enabled: true
+    title: "Noorsher Ahmed, PhD"
+    imageUrl: "NOOR_profile.png"
+    imageTitle: "Profile picture"
+    subtitle: "Postdoc at Stanford University"
+    buttons:
+      - name: Papers
+        url: papers
+      - name: Tools
+        url: tools
+      - name: Teaching
+        url: teaching
+
+  assets:
+    disableHLJS: true
+    disableScrollBarStyle: true
+  
+  label:
+    text: "Noorsher Ahmed"
+    icon: "favicon.ico"
+    iconHeight: 18
+
+  homeInfoParams:
+    Title: "Noorsher Ahmed"
+    Content: >
+      I am a postdoc at Stanford University in the Department of Bioengineering. My work is at the intersection of high content imaging for perturbation screens, robotics, computer vision, and virtual cell modeling.
+      Welcome to my personal website where I share my research, teaching, and tools.
+
+  socialIcons:
+    - name: "email"
+      url: "mailto:noor01@stanford.edu"
+    - name: "github"
+      url: "https://github.com/noor01"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/noorsher-ahmed/"
+    - name: "twitter"
+      url: "https://x.com/NoorsherAhmed"
+    - name: "googlescholar"
+      url: "https://scholar.google.com/citations?user=YGuxdZQAAAAJ&hl=en&authuser=2"
+    - name: "cv"
+      url: "https://drive.google.com/file/d/1wGe2GRRJq7KGE7UqxhAYlYR4cSkZ8Yzz/view?usp=sharing"
+
+  editPost:
+    URL: "https://github.com/noor01/noor01.github.io/tree/main/content"
+    Text: "Suggest Changes"
+    appendFilePath: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    noClasses: false
+    style: github
+
+privacy:
+  vimeo:
+    disabled: false
+    simple: true
+
+  # Updated X (formerly Twitter) config
+  x:
+    disabled: false
+    enableDNT: true
+    simple: true
+
+  instagram:
+    disabled: false
+    simple: true
+
+  youtube:
+    disabled: false
+    privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  # Updated X (formerly Twitter) config
+  x:
+    disableInlineCSS: true 
