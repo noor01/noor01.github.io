@@ -140,14 +140,14 @@
 
 /* Vibrant gradient backgrounds */
 body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%) !important;
+    background: linear-gradient(135deg, #7dd3c4 0%, #ffa726 100%) !important;
     min-height: 100vh;
     transition: background 0.3s ease;
 }
 
-/* Dark mode - deeper, more dramatic gradient */
+/* Dark mode - simplified dark blue to green */
 body.dark {
-    background: linear-gradient(135deg, #0c0c0c 0%, #2d1b69 25%, #11998e 50%, #38ef7d 75%, #0575e6 100%) !important;
+    background: linear-gradient(135deg, #1a0d4a 0%, #38ef7d 100%) !important;
 }
 
 /* Alternative vibrant gradients - uncomment to try */
